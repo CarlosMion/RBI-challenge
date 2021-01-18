@@ -46,7 +46,7 @@ export type MenuItemOptionsType = {
     _type: string;
 }
 
-export type MenuItemType = {
+export type MenuType = {
     name: ItemNameType;
     options: Array<MenuItemOptionsType>;
     _createdAt: string;
