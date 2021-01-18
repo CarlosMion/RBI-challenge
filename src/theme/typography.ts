@@ -1,14 +1,10 @@
 const fonts = {
-  nunito: 'Nunito, sans-serif',
+  insaniBurguer: 'InsaniBurguer, sans-serif',
 };
 
 const fontWeights = {
   regular: 400,
-  xRegular: 500,
-  semiBold: 600,
   bold: 700,
-  xBold: 800,
-  black: 900,
 };
 
 const letterSpacings = {
@@ -17,29 +13,17 @@ const letterSpacings = {
 };
 
 const fontSizes = {
-  xxSmall: 12,
-  xSmall: 14,
-  small: 16,
-  normal: 18,
-  xNormal: 20, 
-  xxNormal: 22,
-  medium: 24,
-  xMedium: 32,
-  large: 40,
-  xLarge: 44,
+  small: 14,
+  medium: 16,
+  large: 18,
+  xLarge: 20,
 };
 
 const lineHeights = {
-  xxSmall: fontSizes.xxSmall + 8,
-  xSmall: fontSizes.xSmall + 8,
-  small: fontSizes.small + 8,
-  normal: fontSizes.normal + 6,
-  xNormal: fontSizes.xNormal + 8,
-  xxNormal: fontSizes.xNormal + 6,
-  medium: fontSizes.medium + 8,
-  xMedium: fontSizes.xMedium + 8,
-  large: fontSizes.large + 6,
-  xLarge: fontSizes.xLarge + 8,
+  small: fontSizes.small + 4,
+  medium: fontSizes.medium + 4,
+  large: fontSizes.large + 4,
+  xLarge: fontSizes.xLarge + 4,
 };
 
 export const typography = {

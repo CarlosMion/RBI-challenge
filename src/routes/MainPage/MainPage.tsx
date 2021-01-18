@@ -2,11 +2,14 @@ import React from 'react';
 
 import MainTemplate from '../../templates/MainTemplate';
 import styled from 'styled-components';
+import { Text } from '../../components/atoms/Text';
 
 export default function MainPage() {
   return (
     <MainTemplate>
-      <Container>Hello RBI :) </Container>
+      <Container>
+        <Text.UpperCaseBoldXLarge>Hello RBI :)</Text.UpperCaseBoldXLarge>
+      </Container>
     </MainTemplate>
   );
 }

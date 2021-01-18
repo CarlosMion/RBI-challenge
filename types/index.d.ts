@@ -1,3 +1,38 @@
+/* System types */
+export type Colors = {
+  primary: string;
+  primaryDark: string;
+  primaryLight: string;
+  red: string;
+  iron: string;
+  mustard: string;
+  mustardDisabled: string;
+  shadow: string;
+  silverDark: string;
+  silverDarkHover: string;
+  cloud: string;
+  white: string;
+  whiteHover: string;
+  };
+  
+  export type Sizes = {
+    small: number;
+    medium: number;
+    large: number;
+    xLarge: number;
+  };
+  
+  export type Fonts = {
+    insaniBurguer: string;
+  };
+  
+  export type FontWeights = {
+    regular: number;
+    bold: number;
+  };
+  
+
+/* API types */
 export type ItemNameType = {
     en: string;
     es: string;
