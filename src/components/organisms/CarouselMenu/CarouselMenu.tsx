@@ -21,6 +21,8 @@ export function CarouselMenu() {
     isFetching: menuIsFetching,
   } = useMenu();
 
+  
+
   return (
       <Container>
         {}
