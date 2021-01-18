@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { MenuType } from '../../../types';
+import { MenuResponseType } from '../../../types';
 
 import {
   RequestException,
@@ -8,12 +8,8 @@ import {
   queryConfigDefaults,
 } from '../http-client';
 
-async function getMenu(
-  queryKey: string
-) {
-
+async function getMenu(queryKey: string) {
   const endpoint = '/menu';
-
 
   const result = await get({
     endpoint,
@@ -26,12 +22,13 @@ async function getMenu(
 
 export function useMenu() {
   const { data, error, isFetching, refetch } = useQuery<
-  MenuType,
+  MenuResponseType,
     RequestException
   >({
     queryKey: 'menu',
     queryFn: getMenu,
     config: { ...queryConfigDefaults },
   });
-  return { menuOptions: data?.options, error, isFetching, refetch };
+  
+  return { menuOptions: data?.responseData?.options, error, isFetching, refetch };
 }

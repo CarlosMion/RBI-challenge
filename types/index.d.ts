@@ -33,6 +33,15 @@ export type Colors = {
   
 
 /* API types */
+export type ResponseInfoType = {
+    ok: boolean;
+    redirected: boolean;
+    status: number;
+    statusText: string;
+    type: string;
+    url: string;
+}
+
 export type ItemNameType = {
     en: string;
     es: string;
@@ -54,6 +63,10 @@ export type MenuType = {
     _rev: string;
     _type: string;
     _updatedAt: string;
+}
+
+export type MenuResponseType = ResponseInfoType & {
+    responseData: MenuType;
 }
 
 export type DescriptionLanguageItemChildrenType = {
@@ -101,4 +114,8 @@ export type ItemType = {
     name: ItemNameType;
     _createdAt: string;
     _id: string;
+}
+
+export type SectionsResponseType = ResponseInfoType & {
+    responseData: Array<SectionItemType>
 }

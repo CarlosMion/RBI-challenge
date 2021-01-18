@@ -70,49 +70,18 @@ export function get({ endpoint }: GetOptions) {
   return client(endpoint, customConfig) 
 }
 
-// export function post({ endpoint, payload }: PostOptions) {
-//   const customConfig = {
-//     method: 'POST',
-//     body: JSON.stringify(payload),
-//     headers: {
-//       'Content-Type': 'application/vnd.api+json',
-//     },
-//   };
-//   return client(endpoint, customConfig);
-// }
-
-// export function put(endpoint: string, payload: object) {
-//   const customConfig = {
-//     method: 'PUT',
-//     body: JSON.stringify(payload),
-//     headers: {
-//       'Content-Type': 'application/vnd.api+json',
-//     },
-//   };
-//   return client(endpoint, customConfig);
-// }
-
-// export function deleteInfo({ endpoint }: GetOptions) {
-//   const customConfig = {
-//     method: 'DELETE',
-//     headers: {
-//       'Content-Type': 'application/vnd.api+json',
-//     },
-//   };
-//   return client(endpoint, customConfig);
-// }
-
 export async function client(
   endpoint: string,
   { headers: customHeaders, ...customConfig }: CustomConfig
 ) {
 
   const config = {
+    ...customHeaders,
     ...customConfig,
   };
 
   return window
-    .fetch(`http://localhost:3001/api${endpoint}`, config)
+    .fetch(`/api${endpoint}`, config)
     .then(async (response) => {
       const responseInfo = {
         ok: response.ok,
@@ -124,9 +93,10 @@ export async function client(
       };
       try {
         const data = await response.json();
+        console.log(data)
         return {
           ...responseInfo,
-          ...data,
+          responseData: data,
         };
       } catch (error) {
         return response;
