@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import MainTemplate from '../../templates/MainTemplate';
-import { Text } from 'components/atoms/Text';
 import { CarouselMenu } from 'components/organisms/CarouselMenu';
 
 export default function MainPage() {
