@@ -24,6 +24,11 @@ html {
 
 body {
   background: #ffffff;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 img {
@@ -87,8 +92,8 @@ a {
  */
 /* --- Chrome and Safari body scroll --- */
 html {
-  --track-bg: #ffffff;
-  --thumb-bg: #e4e6ea;
+  --track-bg: #EFECE5;
+  --thumb-bg: #725130;
 }
 body::-webkit-scrollbar {
   width: 10px;
