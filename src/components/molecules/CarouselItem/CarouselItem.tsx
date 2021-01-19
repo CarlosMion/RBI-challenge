@@ -28,26 +28,24 @@ export function CarouselItem({ section }: Props) {
 }
 
 const LinkContainer = styled(Link)<{ isSelected: boolean }>`
-  text-decoration: none;
+  padding: 8px 0px;
   background-color: ${({ isSelected, theme }) =>
     isSelected
       ? `${theme.colors.silverDarkHover}`
       : `${theme.colors.silverDark}`};
-  border-radius: 8px;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.silverDarkHover};
-  }
 `;
 
 const Container = styled.div<{ isSelected: boolean }>`
   display: flex;
-  padding: 16px 8px;
+  padding: 8px 8px;
   flex-direction: column;
-  width: 160px;
+  width: 176px;
   align-items: center;
-
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.silverDarkHover};
+  }
   transform: ${({ isSelected }) => (isSelected ? 'scale(0.95)' : 'none')};
+  border-radius: 8px;
 `;
 
 const Image = styled.img`
