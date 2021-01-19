@@ -93,7 +93,6 @@ export async function client(
       };
       try {
         const data = await response.json();
-        console.log(data)
         return {
           ...responseInfo,
           responseData: data,
