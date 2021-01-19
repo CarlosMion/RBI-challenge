@@ -108,6 +108,10 @@ export type SectionItemType = {
     _id: string;
 }
 
+export type SectionsResponseType = ResponseInfoType & {
+    responseData: Array<SectionItemType>
+}
+
 export type ItemType = {
     description: DescriptionType;
     image: ItemImageType;
@@ -116,6 +120,6 @@ export type ItemType = {
     _id: string;
 }
 
-export type SectionsResponseType = ResponseInfoType & {
-    responseData: Array<SectionItemType>
+export type ItemsResponseType = ResponseInfoType & {
+    responseData: Array<ItemType>
 }
