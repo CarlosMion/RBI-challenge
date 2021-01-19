@@ -13,10 +13,10 @@ const letterSpacings = {
 };
 
 const fontSizes = {
-  small: 12,
-  medium: 14,
-  large: 16,
-  xLarge: 18,
+  small: 10,
+  medium: 12,
+  large: 14,
+  xLarge: 16,
 };
 
 const lineHeights = {
