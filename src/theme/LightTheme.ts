@@ -9,8 +9,8 @@ export const LightTheme: DefaultTheme = {
     ...colors,
 
     // skeleton
-    skeletonBackground: '#EBEDF0',
-    skeletonForeground: '#F0F3F8',
+    skeletonBackground: `${rgba('#6a4622', 0.4)}`,
+    skeletonForeground: `${rgba('#9b7753', 0.4)}`,
   },
   animation: {
     slow: '0.6s',
