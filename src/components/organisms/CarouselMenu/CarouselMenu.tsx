@@ -88,7 +88,7 @@ const CaroulselContainer = styled.div`
   left: 126px;
   padding: 0 24px;
   overflow: scroll;
-  width: calc(100vw - 136px);
+  width: calc(100vw - 126px);
   align-items: center;
   background-color: ${({ theme }) => theme.colors.silverDark};
   ${Scrollbar}

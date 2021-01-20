@@ -18,7 +18,10 @@ export function CarouselItem({ section }: Props) {
     <LinkContainer to={section!._id} isSectionSelected={isSelectedSection}>
       <Container isSectionSelected={isSelectedSection}>
         <Image
-          src={process.env.PUBLIC_URL + `/images/${section?.image.asset._ref}`}
+          src={
+            process.env.PUBLIC_URL +
+            `/images/${section?.carouselImage.asset._ref}`
+          }
           alt={section?.name.en || ''}
         />
         <Title>{section?.name.en}</Title>
@@ -28,7 +31,7 @@ export function CarouselItem({ section }: Props) {
 }
 
 const LinkContainer = styled(Link)<{ isSectionSelected: boolean }>`
-  padding: 8px 0px;
+  padding: 4px 0px 12px;
   cursor: default;
 `;
 
