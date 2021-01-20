@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { Colors } from '../../../../types';
+import { Colors } from '../../../../../types';
 
 type Props = {
   children: ReactNode;

@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 import { Text } from 'components/atoms/Text';
 import { rgba } from 'polished';
-import { IconChevronRight } from 'components/icons';
-import { ItemType } from '../../../types';
+import { IconChevronRight } from 'components/atoms/icons';
+import { ItemType } from '../../../../types';
 import { useWindowSize } from 'utils/windowSize';
 
 type Props = {
@@ -14,8 +14,6 @@ type Props = {
 
 export function ItemCard({ item }: Props) {
   const cardSize = useWindowSize().width / 4;
-
-  console.log(cardSize);
 
   return (
     <Container
