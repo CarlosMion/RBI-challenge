@@ -8,6 +8,7 @@ export default function GridSkeleton() {
   return (
     <>
       <PhoneLoader
+        data-testid="grid-skeleton"
         width="100%"
         height="100%"
         viewBox="0 0 480 800"
@@ -20,6 +21,7 @@ export default function GridSkeleton() {
         <rect x="252" y="288" rx="4" width="196" height="240" />
       </PhoneLoader>
       <TabletLoader
+        data-testid="grid-skeleton"
         width="100%"
         height="100%"
         viewBox="0 0 2000 1600"
@@ -34,6 +36,7 @@ export default function GridSkeleton() {
         <rect x="1400" y="840" rx="4" width="520" height="720" />
       </TabletLoader>
       <DesktopLoader
+        data-testid="grid-skeleton"
         width="100%"
         height="100%"
         viewBox="0 0 2000 1600"

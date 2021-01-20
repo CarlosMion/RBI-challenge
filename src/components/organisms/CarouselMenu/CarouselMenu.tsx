@@ -18,7 +18,7 @@ export function CarouselMenu() {
   const isLoading = menuIsFetching && sectionsAreFetching;
 
   return (
-    <Container>
+    <Container data-testid="carousel-menu">
       <LogoContainer>
         <BKLogo />
       </LogoContainer>

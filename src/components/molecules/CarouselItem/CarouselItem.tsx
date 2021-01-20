@@ -15,7 +15,7 @@ export function CarouselItem({ section }: Props) {
   const isSelectedSection = selectedSection === section?._id;
 
   return (
-    <LinkContainer to={section!._id}>
+    <LinkContainer to={section!._id} data-testid="carousel-item">
       <Container isSectionSelected={isSelectedSection}>
         <Image
           src={

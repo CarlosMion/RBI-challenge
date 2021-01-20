@@ -6,7 +6,7 @@ import { Button } from 'components/molecules/Button';
 
 export function Footer() {
   return (
-    <Container>
+    <Container data-testid="footer">
       <Column>
         <Text.NunitoUpperCaseMedium color="white">
           {'See tips & tricks'}
