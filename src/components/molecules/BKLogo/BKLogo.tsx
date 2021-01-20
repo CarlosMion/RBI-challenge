@@ -22,7 +22,7 @@ export function BKLogo() {
 
 const Container = styled.div`
   display: flex;
-  padding-top: 16px;
+  padding: 16px 12px 0;
   height: 100%;
   flex-direction: column;
   align-items: center;
