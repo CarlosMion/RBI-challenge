@@ -31,7 +31,15 @@
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
-    "extends": "react-app"
+    "env": {
+      "browser": true,
+      "node": true
+  },
+    "extends": "react-app",
+    "rules": {
+      "strict": 2
+  }
+    
   },
   "prettier": {
     "singleQuote": true,
