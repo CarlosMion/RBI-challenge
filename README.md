@@ -1,70 +1,56 @@
 # RBI Consumer Technology: Tech Interview Challenge
 
-In this challenge you will build a basic React application that lets a customer view the menu at a restaurant.
+## Architectural Decisions
 
-## Instructions
+ - TypeScript: TypeScript was added because of it's many benefits over JavaScript, such as:
+   1. Type safety
+   2. Makes easier to deal with incomming api's data
+   3. It's more productive due to the `type` anotation that allows the IDE to display the component Props in other files
 
-As part of the interview process we would like you to complete a coding challenge that demonstrates your knowledge of JavaScript and React which our entire codebase is built on. 
+- StyledComponents: StyledComponents was added due to it's hability to tell a story inside the code that's being written, every component can have a name based on it's role inside the page. Increasing:
+ 1. readability
+ 2. manutenability
+ 3. code organisation
 
-When you complete the challenge: 
-- Upload your code to a Github private repo and share with [__smchalal__](https://github.com/smchalal), [__gabceb__](https://github.com/gabceb), [__jonrose-dev__](https://github.com/jonrose-dev), [__kylefinley__](https://github.com/kylefinley)
-- Email ctg-hiring@rbi.com
+- Updated React dependencies: Updated the pre-defined project's React dependencies, for it's a good practice to keep them up to date.
 
-## Initial Setup
+- Responsiveness: The project was made to work in 3 different devices:
+   1. SmartPhones
+   2. Tablets
+   3. Desktop
 
-1. Run `npm install` or `yarn`
-2. Run `npm start` or `yarn start`
+- Linter: ESlint was used and configured inside the package.json file for helping the dev keep a good level of code.
+
+- Prettier: a prettier configuration file was also added, to insure indentation and other patterns were followed trhoughout the code
+
+## Folder Structure
+
+- Atomic Design: The system architecture was defined following the Atomic Design directives, since it was a small project with only one context(the main page one), it was simpler and offered more productivity than DDD, for example.
+
+inside the src folder, you will find:
+
+- `api`: all the files needed for fetching the api's data.
+
+- `components`: all the components used on the screen's building.
+
+- `routes`: all the pages corresponding the url being displayed and the index file, where the router was configured.
+
+- `templates`: comprehends the templates(the basic page structure) that the routes will use.
+
+-`theme`: all the files that configure the visual identity of the application.
+
+-`utils`: all the files with pure JS functions that the project needed for data handling.
+
+
+## Tests
+
+- Every test file is beside the file they are testing, so there is no test folder present.
+- To run the tests, use `yarn test`.
+
+
+## Running the project
+
+1. Run `yarn`
+2. Run `yarn start`
 3. Open your browser to [localhost:3000](http://localhost:3000)
 
-## General Guidelines
-
-The goal of this challenge is to complete the requirements below while maintaining good code organization and using idiomatic React patterns. We don't expect perfect code, but we do want to see _some_ consideration for a quality React application.
-
-Overall we're looking for a jumping off point to have a conversation about your thinking and approach rather than a production-ready application. We will also be looking into code patterns you use and make sure they are appropriate with the experience you have using React and developing applications.
-
-- Reference the `EngineeringInterview-Designs.pdf` file for a general idea on the UI we expect. The design is up to you, but the Burger King UI on the last page is _roughly_ the layout we're looking for.
-- The UI should look presentable, but we don't expect you to be a designer. Prefer a well-working application over design.
-- Use any external packages you think would be helpful.
-- Tests are not required.
-
-## Requirements
-
-1. At the top of the page display a navigation bar containing the sections from the menu. These should be displayed horizontally with their respective carousel image and name. The content for this menu should be fetched from the API (see below for API data).
-
-2. Below the navigation bar show a grid of all the elements within the current selection. The cards should be in a 3-column layout, one item per column.
-   1. If the user is on the main menu the elements should be the same as the top navigation bar.
-   2. If the user has selected a section then it should be of all the items belonging to the selected section.
-
-3. Each section in the top menu should be clickable, and when clicked the tiles should reflect the items that belong to the selected section. The selected section in the navigation bar should be styled in some way to indicate that it is the active filter.
-
-4. The user should be able to navigate their browsing history and be able to go backwards and forwards through the sections they have viewed. 
-
-## API Data
-
-A separate Express server will be started when you run `npm|yarn start` that acts as your API. During development you can hit this server from your React application by making requests to `/api/..` (ex: `fetch('/api/menu')`).
-
-The data you'll fetch is probably more obtuse than you're used to -- we want to see how you'd handle difficult API response constraints. There is more data in the returned JSON than is necessary to complete this exercise.
-
-There are three entity types you'll be dealing with:
-
-#### `Menu`
-
-- `GET /api/menu`
-
-The menu dictates what shows up in the top nav. It holds a list of references to `Section` objects, which in this case are the individual options to be shown in the nav.
-
-#### `Section`
-
-- `GET /api/sections`
-
-For the purposes of this exercise you can treat a section like a category (`"Combo Meals", "Beverages", "Salads", etc.`). Each section holds a list of references to `Item` objects.
-
-#### `Item`
-
-- `GET /api/items`
-
-An item is the thing that you would order at the counter: `"Double Whopper", "Coffee", "French Fries"`.
-
-## Images
-
-When showing images for the menu sections and the items you'll need to pull the image name from the API data and use it to render the image found at `/images/:imageID`.
