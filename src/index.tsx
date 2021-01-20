@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './fonts/Insanibc.ttf';
 import { App } from './App';
 
 import './global.css';

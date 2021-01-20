@@ -1,7 +1,7 @@
 import React from 'react';
 import { SvgIcon } from '../SvgIcon';
 
-import { Colors } from '../../../../types';
+import { Colors } from '../../../../../types';
 
 type Props = {
   /**

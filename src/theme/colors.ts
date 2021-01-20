@@ -12,7 +12,7 @@ export const colors = {
   shadow: '#9CA1AC',
   silverDark: '#EFECE5',
   silverDarkHover: '#E0DED9',
-  cloud: '#978E91',
+  cloud: '#FDFDFD',
   white: '#FFFFFF',
   whiteHover: '#E4E6EA',
 };
