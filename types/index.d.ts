@@ -6,7 +6,6 @@ export type Colors = {
   red: string;
   iron: string;
   mustard: string;
-  mustardDisabled: string;
   shadow: string;
   silverDark: string;
   silverDarkHover: string;
@@ -31,6 +30,11 @@ export type Colors = {
     regular: number;
     bold: number;
   };
+
+  export type IconsType = 'IconChevronRight';
+
+
+  export type ButtonVariant = 'primary' | 'outline';
   
 
 /* API types */

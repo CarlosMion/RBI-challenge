@@ -20,7 +20,7 @@ export function ItemCard({ item }: Props) {
         />
       </ImageContainer>
       <TitleContainer>
-        <Title>{item?.name.en}</Title>
+        <Title color="primaryDark">{item?.name.en}</Title>
       </TitleContainer>
       <ButtonContainer>
         <Button>

@@ -6,7 +6,6 @@ export const colors = {
   red: '#E12929',
   iron: '#323230',
   mustard: 'E09F14',
-  mustardDisabled: '#6A4622',
 
   // neutrals
   shadow: '#9CA1AC',
