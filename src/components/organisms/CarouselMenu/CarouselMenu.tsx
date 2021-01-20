@@ -8,7 +8,7 @@ import { getMenuSectionInfo } from 'utils/apiHelpers';
 import { BKLogo } from 'components/molecules/BKLogo';
 import { Scrollbar, ScrollbarAutoHide } from '../../styles';
 import { rgba } from 'polished';
-import MenuSkeleton from 'components/Skeletons/MenuSkeleton';
+import MenuSkeleton from 'components/molecules/Skeletons/MenuSkeleton';
 
 export function CarouselMenu() {
   const {
@@ -26,7 +26,7 @@ export function CarouselMenu() {
   const isLoading = menuIsFetching && sectionsAreFetching;
 
   return (
-    <>
+    <Container>
       <LogoContainer>
         <BKLogo />
       </LogoContainer>
@@ -47,9 +47,18 @@ export function CarouselMenu() {
           })}
         </CaroulselContainer>
       )}
-    </>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  box-shadow: ${({ theme }) =>
+    `0 10px 10px -2px ${rgba(theme.colors.shadow, 0.8)}`};
+`;
 
 const SkeletonContainer = styled.div`
   display: flex;
@@ -76,10 +85,10 @@ const CaroulselContainer = styled.div`
   display: flex;
   position: absolute;
   top: 0;
-  left: 100px;
+  left: 126px;
   padding: 0 24px;
   overflow: scroll;
-  width: calc(100vw - 102px);
+  width: calc(100vw - 136px);
   align-items: center;
   background-color: ${({ theme }) => theme.colors.silverDark};
   ${Scrollbar}
