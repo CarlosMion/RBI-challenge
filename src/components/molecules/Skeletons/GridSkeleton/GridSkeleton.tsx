@@ -37,7 +37,6 @@ export default function GridSkeleton() {
       </TabletLoader>
       <DesktopLoader
         data-testid="grid-skeleton"
-        w
         width="100%"
         height="100%"
         viewBox="0 0 2000 1600"

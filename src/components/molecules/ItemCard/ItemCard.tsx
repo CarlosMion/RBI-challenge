@@ -12,7 +12,7 @@ type Props = {
 
 export function ItemCard({ item }: Props) {
   return (
-    <Container>
+    <Container data-testid="item-card">
       <ImageContainer>
         <Image
           src={process.env.PUBLIC_URL + `/images/${item?.image.asset._ref}`}

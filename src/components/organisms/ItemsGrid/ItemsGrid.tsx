@@ -13,7 +13,7 @@ export function ItemsGrid({ items }: Props) {
     return <ItemCard key={index} item={product} />;
   });
 
-  return <ItemsContainer>{itemList}</ItemsContainer>;
+  return <ItemsContainer data-testid="items-grid">{itemList}</ItemsContainer>;
 }
 
 const ItemsContainer = styled.div`
