@@ -16,6 +16,7 @@ export type Colors = {
   };
   
   export type Sizes = {
+    xSmall: number;
     small: number;
     medium: number;
     large: number;
@@ -23,7 +24,7 @@ export type Colors = {
   };
   
   export type Fonts = {
-    insaniBurguer: string;
+    sigmarOne: string;
   };
   
   export type FontWeights = {
@@ -116,7 +117,7 @@ export type ItemType = {
     description: DescriptionType;
     image: ItemImageType;
     name: ItemNameType;
-    _createdAt: string;
+    _createdAt?: string;
     _id: string;
 }
 

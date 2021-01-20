@@ -1,5 +1,5 @@
 const fonts = {
-  insaniBurguer: 'InsaniBurguer, sans-serif',
+  SigmarOne: 'Sigmar One',
 };
 
 const fontWeights = {
@@ -13,6 +13,7 @@ const letterSpacings = {
 };
 
 const fontSizes = {
+  xSmall: 8,
   small: 10,
   medium: 12,
   large: 14,
@@ -20,6 +21,7 @@ const fontSizes = {
 };
 
 const lineHeights = {
+  xSmall: fontSizes.xSmall + 4, 
   small: fontSizes.small + 4,
   medium: fontSizes.medium + 4,
   large: fontSizes.large + 4,

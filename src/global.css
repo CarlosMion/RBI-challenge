@@ -7,11 +7,6 @@ html {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'InsaniBurguer';
-  src: local('Insanibc'), url(./fonts/Insanibc.ttf) format('truetype');
-}
-
 *,
 *:before,
 *:after {
