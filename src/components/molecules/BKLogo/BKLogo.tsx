@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { SectionItemType } from '../../../../types';
 import { Text } from 'components/atoms/Text';
 import { Link } from 'react-router-dom';
 
@@ -32,9 +31,14 @@ const Container = styled.div`
 
 const Image = styled.img`
   display: flex;
-  width: 102px;
-  height: 64px;
+  width: 70px;
+  height: 42px;
   border-radius: 6px;
+
+  @media only screen and (min-width: 481px) {
+    width: 102px;
+    height: 64px;
+  }
 `;
 
 const Title = styled(Text.UpperCaseBoldLarge)`

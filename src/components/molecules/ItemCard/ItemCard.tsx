@@ -61,8 +61,6 @@ const ImageContainer = styled.div`
   height: 140px;
   justify-content: center;
   border-radius: 20px 20px 0 0;
-  border-bottom: ${({ theme }) =>
-    `0.5px solid ${rgba(theme.colors.shadow, 0.5)}`};
 
   @media only screen and (min-width: 481px) {
     width: 220px;
@@ -80,10 +78,12 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 6px;
+  border-radius: 20px 20px 0 0;
+  transform: translateX(1px);
 `;
 const TitleContainer = styled.div`
   display: flex;
-  padding: 8px 40px 0 8px;
+  padding: 12px 40px 0 12px;
   align-items: flex-start;
   justify-content: flex-start;
 

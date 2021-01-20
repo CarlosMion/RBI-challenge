@@ -15,7 +15,7 @@ export function CarouselItem({ section }: Props) {
   const isSelectedSection = selectedSection === section?._id;
 
   return (
-    <LinkContainer to={section!._id} isSectionSelected={isSelectedSection}>
+    <LinkContainer to={section!._id}>
       <Container isSectionSelected={isSelectedSection}>
         <Image
           src={
@@ -30,7 +30,7 @@ export function CarouselItem({ section }: Props) {
   );
 }
 
-const LinkContainer = styled(Link)<{ isSectionSelected: boolean }>`
+const LinkContainer = styled(Link)`
   padding: 4px 0px 12px;
   cursor: default;
 `;
@@ -39,7 +39,7 @@ const Container = styled.div<{ isSectionSelected: boolean }>`
   display: flex;
   padding: 8px 8px;
   flex-direction: column;
-  width: 176px;
+  width: 120px;
   align-items: center;
   background-color: ${({ isSectionSelected, theme }) =>
     isSectionSelected
@@ -51,13 +51,21 @@ const Container = styled.div<{ isSectionSelected: boolean }>`
   transform: ${({ isSectionSelected }) =>
     isSectionSelected ? 'scale(0.95)' : 'none'};
   border-radius: 8px;
+
+  @media only screen and (min-width: 481px) {
+    width: 176px;
+  }
 `;
 
 const Image = styled.img`
   display: flex;
-  width: 64px;
-  height: 64px;
-  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+
+  @media only screen and (min-width: 481px) {
+    width: 64px;
+    height: 64px;
+  }
 `;
 
 const Title = styled(Text.UpperCaseBoldLarge)`
@@ -69,4 +77,9 @@ const Title = styled(Text.UpperCaseBoldLarge)`
   -webkit-box-orient: vertical;
   text-overflow: visible;
   overflow: visible;
+  font-size: ${({ theme }) => theme.fontSizes.xSmall}px;
+
+  @media only screen and (min-width: 481px) {
+    font-size: ${({ theme }) => theme.fontSizes.large}px;
+  }
 `;
