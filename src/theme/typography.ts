@@ -1,5 +1,5 @@
 const fonts = {
-  SigmarOne: 'Sigmar One',
+  sigmarOne: 'Sigmar One',
 };
 
 const fontWeights = {
