@@ -15,6 +15,7 @@ import { ItemsGrid } from 'components/organisms/ItemsGrid';
 import { Scrollbar, ScrollbarAutoHide } from 'components/styles';
 import GridSkeleton from 'components/molecules/Skeletons/GridSkeleton';
 import { useMenu } from 'api/menu';
+import { Button } from 'components/molecules/Button';
 
 export default function MainPage() {
   const { selectedSection } = useParams<{ selectedSection: string }>();
@@ -43,12 +44,16 @@ export default function MainPage() {
         ) : (
           <ItemsGrid items={itemsToBeShown} />
         )}
+        <ButtonsContainer>
+          <Button variant="outline">en espanol</Button>
+          <Button variant="outline">have a coupon?</Button>
+        </ButtonsContainer>
       </Container>
     </MainTemplate>
   );
 }
 
-export const Container = styled.div`
+const Container = styled.div`
   padding-top: 116px;
   background-color: ${({ theme }) => theme.colors.cloud};
   width: 100%;
@@ -63,4 +68,12 @@ export const Container = styled.div`
   @media only screen and (min-width: 481px) {
     padding-top: 156px;
   }
+`;
+
+const ButtonsContainer = styled.div`
+  display: flex;
+  padding: 36px 108px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 `;
