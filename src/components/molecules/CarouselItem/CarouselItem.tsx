@@ -15,8 +15,8 @@ export function CarouselItem({ section }: Props) {
   const isSelectedSection = selectedSection === section?._id;
 
   return (
-    <LinkContainer to={section!._id} isSelected={isSelectedSection}>
-      <Container isSelected={isSelectedSection}>
+    <LinkContainer to={section!._id} isSectionSelected={isSelectedSection}>
+      <Container isSectionSelected={isSelectedSection}>
         <Image
           src={process.env.PUBLIC_URL + `/images/${section?.image.asset._ref}`}
           alt={section?.name.en || ''}
@@ -27,24 +27,26 @@ export function CarouselItem({ section }: Props) {
   );
 }
 
-const LinkContainer = styled(Link)<{ isSelected: boolean }>`
+const LinkContainer = styled(Link)<{ isSectionSelected: boolean }>`
   padding: 8px 0px;
-  background-color: ${({ isSelected, theme }) =>
-    isSelected
-      ? `${theme.colors.silverDarkHover}`
-      : `${theme.colors.silverDark}`};
+  cursor: default;
 `;
 
-const Container = styled.div<{ isSelected: boolean }>`
+const Container = styled.div<{ isSectionSelected: boolean }>`
   display: flex;
   padding: 8px 8px;
   flex-direction: column;
   width: 176px;
   align-items: center;
+  background-color: ${({ isSectionSelected, theme }) =>
+    isSectionSelected
+      ? `${theme.colors.silverDarkHover}`
+      : `${theme.colors.silverDark}`};
   &:hover {
     background-color: ${({ theme }) => theme.colors.silverDarkHover};
   }
-  transform: ${({ isSelected }) => (isSelected ? 'scale(0.95)' : 'none')};
+  transform: ${({ isSectionSelected }) =>
+    isSectionSelected ? 'scale(0.95)' : 'none'};
   border-radius: 8px;
 `;
 
