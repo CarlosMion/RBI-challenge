@@ -41,7 +41,7 @@ const Image = styled.img`
   }
 `;
 
-const Title = styled(Text.UpperCaseBoldLarge)`
+const Title = styled(Text.SigmarUpperCaseLarge)`
   text-align: center;
   width: 100%;
   display: -webkit-box;

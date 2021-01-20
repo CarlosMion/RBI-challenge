@@ -68,7 +68,7 @@ const Image = styled.img`
   }
 `;
 
-const Title = styled(Text.UpperCaseBoldLarge)`
+const Title = styled(Text.SigmarUpperCaseLarge)`
   text-align: center;
   margin: 8px 0 0;
   width: 100%;

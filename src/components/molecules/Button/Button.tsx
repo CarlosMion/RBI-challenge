@@ -1,4 +1,4 @@
-import React, { forwardRef, ElementType } from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { rgba } from 'polished';
 
@@ -116,9 +116,7 @@ export const Button = forwardRef<Ref, Props>(function Button(
 
 const Primary = css`
   background-color: ${({ theme }) => theme.colors.mustard};
-  border-radius: 4px;
   height: 40px;
-  padding: 0 34px;
 `;
 
 const Outline = css`
@@ -166,11 +164,11 @@ const CommonLabel = css`
   transition: ${({ theme }) => `color ${theme.animation.normal} ease`};
 `;
 
-const PrimaryLabel = styled(Text.UpperCaseMedium)<Props>`
+const PrimaryLabel = styled(Text.SigmarUpperCaseMedium)<Props>`
   ${CommonLabel};
 `;
 
-const OutlineLabel = styled(Text.UpperCaseMedium)<Props>`
+const OutlineLabel = styled(Text.SigmarUpperCaseMedium)<Props>`
   ${CommonLabel};
 `;
 
