@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { Text } from 'components/atoms/Text';
@@ -20,7 +20,7 @@ export function ItemCard({ item }: Props) {
         />
       </ImageContainer>
       <TitleContainer>
-        <Title>{item?.name.en}</Title>
+        <Title color="primaryDark">{item?.name.en}</Title>
       </TitleContainer>
       <ButtonContainer>
         <Button>
@@ -88,7 +88,7 @@ const TitleContainer = styled.div`
   justify-content: flex-start;
 
   @media only screen and (min-width: 481px) {
-    padding-right: 80px;
+    padding-right: 60px;
   }
 
   @media only screen and (min-width: 1025px) {
@@ -96,12 +96,15 @@ const TitleContainer = styled.div`
   }
 `;
 
-const Title = styled(Text.UpperCaseBoldXLarge)`
+const Title = styled(Text.SigmarUpperCaseSmall)`
   width: 100%;
   text-align: start;
-  font-size: ${({ theme }) => theme.fontSizes.medium}px;
 
   @media only screen and (min-width: 481px) {
+    font-size: ${({ theme }) => theme.fontSizes.large}px;
+  }
+
+  @media only screen and (min-width: 1025px) {
     font-size: ${({ theme }) => theme.fontSizes.xLarge}px;
   }
 `;

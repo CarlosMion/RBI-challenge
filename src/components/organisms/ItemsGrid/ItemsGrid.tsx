@@ -20,7 +20,6 @@ const ItemsContainer = styled.div`
   grid-template-columns: repeat(auto-fill, 164px);
   grid-template-rows: repeat(auto-fill, 220px);
   display: grid;
-  padding-bottom: 36px;
   align-items: center;
   width: 100%;
   justify-content: center;

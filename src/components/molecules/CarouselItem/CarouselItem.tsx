@@ -37,7 +37,7 @@ const LinkContainer = styled(Link)`
 
 const Container = styled.div<{ isSectionSelected: boolean }>`
   display: flex;
-  padding: 8px 8px;
+  padding: 8px 4px;
   flex-direction: column;
   width: 120px;
   align-items: center;
@@ -53,7 +53,7 @@ const Container = styled.div<{ isSectionSelected: boolean }>`
   border-radius: 8px;
 
   @media only screen and (min-width: 481px) {
-    width: 176px;
+    width: 186px;
   }
 `;
 
@@ -68,7 +68,7 @@ const Image = styled.img`
   }
 `;
 
-const Title = styled(Text.UpperCaseBoldLarge)`
+const Title = styled(Text.SigmarUpperCaseLarge)`
   text-align: center;
   margin: 8px 0 0;
   width: 100%;

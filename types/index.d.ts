@@ -1,16 +1,16 @@
 /* System types */
 export type Colors = {
+  black: string;
+  cloud: string;
+  iron: string;
+  mustard: string;
   primary: string;
   primaryDark: string;
   primaryLight: string;
   red: string;
-  iron: string;
-  mustard: string;
-  mustardDisabled: string;
   shadow: string;
   silverDark: string;
   silverDarkHover: string;
-  cloud: string;
   white: string;
   whiteHover: string;
   };
@@ -25,12 +25,18 @@ export type Colors = {
   
   export type Fonts = {
     sigmarOne: string;
+    nunito: string;
   };
   
   export type FontWeights = {
     regular: number;
     bold: number;
   };
+
+  export type IconsType = 'IconChevronRight';
+
+
+  export type ButtonVariant = 'primary' | 'outline';
   
 
 /* API types */
