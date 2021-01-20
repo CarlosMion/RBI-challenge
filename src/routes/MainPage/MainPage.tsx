@@ -8,6 +8,7 @@ import { useItems } from 'api/items';
 import { useParams } from 'react-router-dom';
 import { getItemsToBeShown, getMenuSectionInfo } from 'utils/apiHelpers';
 import { ItemsGrid } from 'components/organisms/ItemsGrid';
+import { Scrollbar, ScrollbarAutoHide } from 'components/styles';
 
 export default function MainPage() {
   const { selectedSection } = useParams<{ selectedSection: string }>();
@@ -29,8 +30,8 @@ export default function MainPage() {
 
   return (
     <MainTemplate>
+      <CarouselMenu />
       <Container>
-        <CarouselMenu />
         {isLoadingItems ? (
           <div>loading</div>
         ) : (
@@ -42,11 +43,14 @@ export default function MainPage() {
 }
 
 export const Container = styled.div`
-  position: relative;
+  padding-top: 156px;
+  background-color: ${({ theme }) => theme.colors.cloud};
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  ${Scrollbar}
+  ${ScrollbarAutoHide}
 `;
