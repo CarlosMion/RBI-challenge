@@ -9,7 +9,7 @@ export default function MenuSkeleton() {
     <ContentLoader
       width="100%"
       height={120}
-      viewBox="0 0 100% 120"
+      viewBox="0 0 1416 120"
       backgroundColor={theme.colors.skeletonBackground}
       foregroundColor={theme.colors.skeletonForeground}
     >
