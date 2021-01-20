@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Technical React exercise",
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"node server/index.js\""
+    "start": "concurrently \"react-scripts start\" \"node server/index.js\"",
+    "test": "react-scripts test"
   },
   "repository": {
     "type": "git",
