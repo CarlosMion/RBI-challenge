@@ -1,60 +1,15 @@
-import React, { forwardRef } from 'react';
-import styled, { css } from 'styled-components';
-import { rgba } from 'polished';
+import { forwardRef } from 'react';
 
 import * as Icons from 'components/atoms/icons';
-import { Text } from 'components/atoms/Text';
 
-import { IconsType, Colors, ButtonVariant } from '../../../../types';
-
-type Ref = HTMLButtonElement;
-
-type ButtonProps = {
-  /**
-   * Disables the button, changing the visual style making it unable to be pressed
-   * @default false
-   */
-  disabled?: boolean;
-
-  /** Function to handle button click */
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-
-  /**
-   * The type of the button
-   * @default button
-   */
-  type?: 'submit' | 'button';
-
-  /**
-   * Set this to change the button variant
-   */
-  variant?: ButtonVariant;
-
-  /**
-   * Set the width of the button
-   * @default 'auto'
-   */
-  width?: string;
-
-  /**
-   * Sets the tabIndex of the button
-   */
-  tabIndex?: number;
-};
-
-type Props = ButtonProps & {
-  children: any;
-
-  /**
-   * Set the icon at the end of the button
-   */
-  icon?: IconsType;
-
-  /**
-   * Set the color of the icon at the end of the button
-   */
-  iconColor?: keyof Colors;
-};
+import { ButtonVariant } from '../../../../types';
+import {
+  ButtonStyled,
+  IconContainer,
+  OutlineLabel,
+  PrimaryLabel,
+} from './Button.styled';
+import { Props, Ref } from './types';
 
 function getLabelVariant(variant?: ButtonVariant) {
   switch (variant) {
@@ -113,66 +68,3 @@ export const Button = forwardRef<Ref, Props>(function Button(
     </ButtonStyled>
   );
 });
-
-const Primary = css`
-  background-color: ${({ theme }) => theme.colors.mustard};
-  height: 40px;
-`;
-
-const Outline = css`
-  border: 2px solid ${({ theme }) => rgba(theme.colors.shadow, 0.4)};
-  height: 32px;
-
-  p {
-    max-width: 146px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-`;
-
-const ButtonStyled = styled.button<ButtonProps>`
-  background: none;
-  border: none;
-  padding: 16px 12px;
-  margin: 0;
-  opacity: ${({ disabled }) => (disabled ? 0.2 : 1)};
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  width: ${({ width }) => width};
-  transition: ${({ theme }) =>
-    `border-color ${theme.animation.normal} ease, background-color ${theme.animation.normal} ease, `};
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  border-radius: 24px;
-
-  ${({ tabIndex }) =>
-    `${tabIndex}` === '-1'
-      ? css`
-          cursor: auto;
-          pointer-events: none;
-        `
-      : ''}
-
-  ${({ variant }) => variant === 'primary' && Primary};
-  ${({ variant }) => variant === 'outline' && Outline};
-`;
-
-const CommonLabel = css`
-  transition: ${({ theme }) => `color ${theme.animation.normal} ease`};
-`;
-
-const PrimaryLabel = styled(Text.SigmarUpperCaseMedium)<Props>`
-  ${CommonLabel};
-`;
-
-const OutlineLabel = styled(Text.SigmarUpperCaseMedium)<Props>`
-  ${CommonLabel};
-`;
-
-const IconContainer = styled.div`
-  margin-left: 8px;
-  margin-right: -12px;
-`;

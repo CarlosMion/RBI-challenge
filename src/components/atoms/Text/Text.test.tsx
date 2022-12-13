@@ -1,9 +1,7 @@
-import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render, screen } from 'tests/app-test-utils';
 
 import { Text } from './Text';
-import { colors } from '../../../theme/colors';
 
 describe('<Text />', () => {
   const text = 'text example';

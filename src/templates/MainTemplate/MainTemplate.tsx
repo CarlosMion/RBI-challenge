@@ -1,21 +1,14 @@
-import React, { ReactNode } from 'react';
-import styled from 'styled-components';
+import { ReactNode } from 'react';
+import { Container } from './MainTemplate.styled';
 
 type Props = {
   children?: ReactNode;
 };
 
-export default function MainTemplate({
-  children,
-}: Props) {
+export default function MainTemplate({ children }: Props) {
   return (
-      <Container>
-        <main>{children}</main>
-      </Container>
+    <Container>
+      <main>{children}</main>
+    </Container>
   );
 }
-
-const Container = styled.div`
-  position: relative;
-  height: 100vh;
-`;

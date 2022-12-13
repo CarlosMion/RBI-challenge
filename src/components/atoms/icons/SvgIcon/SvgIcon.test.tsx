@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { render, screen } from 'tests/app-test-utils';
 import '@testing-library/jest-dom/extend-expect';
 

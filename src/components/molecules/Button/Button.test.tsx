@@ -1,9 +1,7 @@
-import * as React from 'react';
 import { render, fireEvent, screen } from 'tests/app-test-utils';
 import '@testing-library/jest-dom/extend-expect';
 
 import { Button } from './Button';
-import { colors } from '../../../theme/colors';
 
 describe('<Button />', () => {
   const text = 'Click here';

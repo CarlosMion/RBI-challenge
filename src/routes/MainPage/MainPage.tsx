@@ -1,6 +1,3 @@
-import React from 'react';
-import styled from 'styled-components';
-
 import MainTemplate from '../../templates/MainTemplate';
 import { CarouselMenu } from 'components/organisms/CarouselMenu';
 import { useSections } from 'api/sections';
@@ -12,11 +9,11 @@ import {
   getSectionItemsToBeShown,
 } from 'utils/apiHelpers';
 import { ItemsGrid } from 'components/organisms/ItemsGrid';
-import { Scrollbar, ScrollbarAutoHide } from 'components/styles';
 import GridSkeleton from 'components/molecules/Skeletons/GridSkeleton';
 import { useMenu } from 'api/menu';
 import { Button } from 'components/molecules/Button';
 import { Footer } from 'components/organisms/Footer';
+import { ButtonsContainer, Container } from './MainPage.styled';
 
 export default function MainPage() {
   const { selectedSection } = useParams<{ selectedSection: string }>();
@@ -54,36 +51,3 @@ export default function MainPage() {
     </MainTemplate>
   );
 }
-
-const Container = styled.div`
-  padding-top: 116px;
-  background-color: ${({ theme }) => theme.colors.cloud};
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  ${Scrollbar}
-  ${ScrollbarAutoHide}
-
-  @media only screen and (min-width: 481px) {
-    padding-top: 156px;
-  }
-`;
-
-const ButtonsContainer = styled.div`
-  display: flex;
-  padding: 36px 16px;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-
-  @media only screen and (min-width: 481px) {
-    padding: 36px 32px;
-  }
-
-  @media only screen and (min-width: 1025px) {
-    padding: 36px 108px;
-  }
-`;
