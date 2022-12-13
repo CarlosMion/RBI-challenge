@@ -1,23 +1,13 @@
-import React from 'react';
 import { SvgIcon } from '../SvgIcon';
 
 import { Colors } from '../../../../../types';
 
 type Props = {
-  /**
-   * Tamanho do ícone
-   * @default "24px"
-   */
   size?: string;
-
-  /**
-   * Altera a cor do ícone
-   * @default "white"
-   */
   color?: keyof Colors;
 };
 
-export function IconChevronRight({ size, color }: Props) {
+export function IconChevronRight({ size = '24px', color = 'white' }: Props) {
   return (
     <SvgIcon size={size} color={color} data-testid="icon-chevron-right">
       <path
